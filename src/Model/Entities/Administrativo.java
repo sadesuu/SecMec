@@ -17,12 +17,10 @@ public class Administrativo extends Usuario {
     }
 
     public void agregarMedico(Paciente paciente, Medico medico) {
-
-
+        paciente.setMedicoAsignado(medico);
     }
 
     public void asignarPrueba(Paciente paciente, PruebaMedica prueba) {
-
     }
 
     @Override

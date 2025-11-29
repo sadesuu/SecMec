@@ -17,6 +17,7 @@ public class Receta extends EntradaHistorial{
     }
 
     public String getTipo(){
+        return this.getClass().getSimpleName();
     }
 
     @Override

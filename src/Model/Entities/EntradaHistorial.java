@@ -27,5 +27,6 @@ public abstract class EntradaHistorial {
     }
 
     public String getTipo(){
+        return this.getClass().getSimpleName();
     }
 }

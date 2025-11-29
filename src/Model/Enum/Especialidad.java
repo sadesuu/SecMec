@@ -1,4 +1,14 @@
 package Model.Enum;
 
 public enum Especialidad {
+    CARDIOLOGIA,
+    DERMATOLOGIA,
+    NEUROLOGIA,
+    PEDIATRIA,
+    PSIQUIATRIA,
+    RADIOLOGIA,
+    GINECOLOGIA,
+    ORTOPEDIA,
+    OFTALMOLOGIA,
+    OTORRINOLARINGOLOGIA
 }

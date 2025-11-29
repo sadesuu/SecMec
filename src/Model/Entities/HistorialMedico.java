@@ -10,7 +10,7 @@ public class HistorialMedico {
     }
 
     public void agregarEntrada(EntradaHistorial entrada){
-
+        entradas.add(entrada);
     }
 
     @Override
