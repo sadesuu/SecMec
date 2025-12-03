@@ -28,9 +28,12 @@ public class Paciente extends Persona {
 
     @Override
     public String toString() {
-        return "Paciente{" +
-                "historial=" + historial +
-                ", medicoAsignado=" + medicoAsignado +
-                '}';
+        return "Paciente:\n" +
+                "-Nombre= " + nombre + '\n' +
+                "-Direccion= " + direccion + '\n' +
+                "-email= " + email + '\n' +
+                "-Dni= " + dni + '\n'+
+                "-Historial= \n" + historial + '\n' +
+                "-MedicoAsignado= " + medicoAsignado.getNombre() +'\n';
     }
 }

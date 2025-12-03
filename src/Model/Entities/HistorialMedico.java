@@ -15,8 +15,8 @@ public class HistorialMedico {
 
     @Override
     public String toString() {
-        return "HistorialMedico{" +
-                "entradas=" + entradas +
-                '}';
+        return "1. Receta: " + entradas.getFirst() + '\n' +
+               "2. Prueba Medica: " + entradas.getLast();
+
     }
 }

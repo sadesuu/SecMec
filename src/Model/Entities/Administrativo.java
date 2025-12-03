@@ -25,8 +25,12 @@ public class Administrativo extends Usuario {
 
     @Override
     public String toString() {
-        return "Administrativo{" +
-                "idAdministrativo='" + idAdministrativo + '\'' +
-                '}';
+        return "Administrativo:\n" +
+                "-idAdministrativo= " + idAdministrativo + '\n' +
+                "-Nombre= " + nombre + '\n' +
+                "-Direccion= " + direccion + '\n' +
+                "-email= " + email + '\n' +
+                "-Dni= " + dni + '\n';
+
     }
 }

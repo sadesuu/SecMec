@@ -22,11 +22,9 @@ public class Receta extends EntradaHistorial{
 
     @Override
     public String toString() {
-        return "Receta{" +
-                "medicamente=" + medicamente +
-                ", fecha=" + fecha +
-                ", idMedico='" + idMedico + '\'' +
-                ", causa='" + causa + '\'' +
-                '}';
+        return "medicamententos= " + medicamente +
+                ", fecha= " + fecha +
+                ", idMedico= " + idMedico +
+                ", causa='" + causa;
     }
 }

@@ -20,13 +20,12 @@ public class Medico extends PersonalSanitario {
 
     @Override
     public String toString() {
-        return "Medico{" +
-                "especialidad=" + especialidad +
-                ", nombre='" + nombre + '\'' +
-                ", direccion='" + direccion + '\'' +
-                ", email='" + email + '\'' +
-                ", dni='" + dni + '\'' +
-                ", numeroColegiado='" + numeroColegiado + '\'' +
-                '}';
+        return "Medico:\n" +
+                "- Especialidad= " + especialidad + '\n' +
+                "- Nombre='" + nombre + '\n' +
+                "- Direccion='" + direccion + '\n' +
+                "- email='" + email + '\'' +
+                "- Dni='" + dni + '\n' +
+                "- NumeroColegiado='" + numeroColegiado + '\n';
     }
 }

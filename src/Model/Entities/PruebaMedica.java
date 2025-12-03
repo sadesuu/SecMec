@@ -32,13 +32,11 @@ public abstract class PruebaMedica extends EntradaHistorial {
 
     @Override
     public String toString() {
-        return "PruebaMedica{" +
-                "tipoPrueba=" + tipoPrueba +
-                ", resultado='" + resultado + '\'' +
-                ", fecha=" + fecha +
-                ", idMedico='" + idMedico + '\'' +
-                ", causa='" + causa + '\'' +
-                '}';
+        return "tipoPrueba= " + tipoPrueba +
+                ", resultado= " + resultado +
+                ", fecha= " + fecha +
+                ", idMedico= " + idMedico +
+                ", causa= " + causa;
     }
 
 
