@@ -51,8 +51,7 @@ import Controller.UserController;
 
 public class Main {
     public static void main(String[] args) {
-        UserController controller = new UserController();
-        controller.start(); // Método que inicia la aplicación o ejemplo simple
+        run() // Método que inicia la aplicación
     }
 }
 ```
