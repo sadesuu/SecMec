@@ -13,7 +13,7 @@ import java.util.ArrayList;
 public class Receta extends EntradaHistorial{
 
     /** Lista de medicamentos prescritos */
-    private ArrayList<String> medicamente;
+    private ArrayList<String> medicamentos;
 
     /**
      * Constructor de la clase Receta.
@@ -21,9 +21,9 @@ public class Receta extends EntradaHistorial{
      * @param fecha Fecha de la receta
      * @param idMedico ID del médico que prescribe
      * @param causa Causa o diagnóstico
-     * @param medicamente Lista de medicamentos prescritos
+     * @param medicamentos Lista de medicamentos prescritos
      */
-    public Receta(LocalDate fecha, String idMedico, String causa, ArrayList<String> medicamente) {
+    public Receta(LocalDate fecha, String idMedico, String causa, ArrayList<String> medicamentos) {
         super(fecha, idMedico, causa);
         this.medicamentos = medicamentos;
     }
@@ -33,8 +33,8 @@ public class Receta extends EntradaHistorial{
      *
      * @return ArrayList con los medicamentos
      */
-    public ArrayList<String> getMedicamente() {
-        return medicamente;
+    public ArrayList<String> getMedicamentos() {
+        return medicamentos;
     }
 
     /**
