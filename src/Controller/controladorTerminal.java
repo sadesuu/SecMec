@@ -7,12 +7,27 @@ import View.vistaTerminal;
 import java.time.LocalDate;
 import java.util.ArrayList;
 
+/**
+ * Controlador principal de la aplicación para la interfaz de terminal.
+ * Gestiona la lógica de negocio y la comunicación entre modelo y vista.
+ *
+ * @author SecMecProject
+ * @version 1.0
+ */
 public class controladorTerminal {
 
+    /**
+     * Método público de inicio de la aplicación.
+     * Llama al método main interno.
+     */
     public static void run() {
         main();
     }
 
+    /**
+     * Método principal que inicializa y ejecuta la aplicación.
+     * Crea datos de prueba y muestra información en la terminal.
+     */
     static void main() {
         // Crear instancia de la vista
         vistaTerminal v = new vistaTerminal();
@@ -33,8 +48,11 @@ public class controladorTerminal {
 
 
         // Mostrar informacion en la terminal
-        System.out.println(v.mostrarPaciente(paciente));
-        System.out.println(v.mostrarMedico(medico));
-        System.out.println(v.mostrarAdministrativo(administrativo));
+        System.out.println(v.vistaTerminal(paciente.toString()));
+        System.out.println(v.vistaTerminal(medico.toString()));
+        System.out.println(v.vistaTerminal(administrativo.toString()));
+
+
+
     }
 }

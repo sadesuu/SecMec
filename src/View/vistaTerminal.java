@@ -4,18 +4,24 @@ import Model.Entities.Administrativo;
 import Model.Entities.Medico;
 import Model.Entities.Paciente;
 
+/**
+ * Clase que representa la vista de terminal del sistema.
+ * Gestiona la presentación de información en la consola.
+ *
+ * @author SecMecProject
+ * @version 1.0
+ */
 public class vistaTerminal {
 
-    public String mostrarMedico(Medico medico){
-        return medico.toString();
-    }
+    /**
+     * Método que muestra información en la terminal.
+     *
+     * @param string Texto a mostrar en la terminal
+     * @return El mismo texto recibido
+     */
+    public String vistaTerminal(String string) {
 
-    public String mostrarPaciente(Paciente paciente){
-        return paciente.toString();
-    }
-
-    public String mostrarAdministrativo(Administrativo administrativo){
-        return administrativo.toString();
+        return string;
     }
 
 }

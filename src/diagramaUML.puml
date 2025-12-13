@@ -1,0 +1,118 @@
+@startuml SecMecProject
+
+' Enums
+enum Especialidad {
+    CARDIOLOGIA
+    DERMATOLOGIA
+    NEUROLOGIA
+    PEDIATRIA
+    PSIQUIATRIA
+    RADIOLOGIA
+    GINECOLOGIA
+    ORTOPEDIA
+    OFTALMOLOGIA
+    OTORRINOLARINGOLOGIA
+}
+
+enum TipoPrueba {
+    SANGRE
+    ORINA
+    RADIODIAGNOSTICO
+    BIOPSIA
+    ELECTROCARDIOGRAMA
+    PRUEBA_ALERGIAS
+}
+
+' Abstract Classes and Classes
+abstract class Persona {
+    # String nombre
+    # String dni
+    # String email
+    # String direccion
+    + Persona(String, String, String, String)
+    + String toString()
+}
+
+class Usuario {
+    # String username
+    # String passwordHash
+    # String salt
+    + Usuario(String, String, String, String, String, String, String)
+    + String toString()
+}
+
+class Paciente {
+    - HistorialMedico historial
+    - Medico medicoAsignado
+    + Paciente(String, String, String, String, HistorialMedico, Medico)
+    + String toString()
+}
+
+abstract class PersonalSanitario {
+    # String numeroColegiado
+    + PersonalSanitario(String, String, String, String, String, String, String, String)
+}
+
+class Medico {
+    - Especialidad especialidad
+    + Medico(String, String, String, String, String, String, String, String, Especialidad)
+    + String toString()
+}
+
+class Administrativo {
+    - String idAdministrativo
+    + Administrativo(String, String, String, String, String, String, String, String)
+    + void agregarMedico(Paciente, Medico)
+    + void asignarPrueba(Paciente, PruebaMedica)
+    + String toString()
+}
+
+class HistorialMedico {
+    - ArrayList<EntradaHistorial> entradas
+    + HistorialMedico(ArrayList<EntradaHistorial>)
+    + void agregarEntrada(EntradaHistorial)
+    + String toString()
+}
+
+abstract class EntradaHistorial {
+    # LocalDate fecha
+    # String idMedico
+    # String causa
+    + EntradaHistorial(LocalDate, String, String)
+    + String getTipo()
+}
+
+class Receta {
+    - ArrayList<String> medicamentos
+    + Receta(LocalDate, String, String, ArrayList<String>)
+    + String toString()
+}
+
+abstract class PruebaMedica {
+    - TipoPrueba tipoPrueba
+    - String resultado
+    + PruebaMedica(LocalDate, String, String, TipoPrueba, String)
+    + String toString()
+}
+
+' Inheritance Relationships
+Persona <|-- Usuario : extends
+Persona <|-- Paciente : extends
+Usuario <|-- PersonalSanitario : extends
+Usuario <|-- Administrativo : extends
+PersonalSanitario <|-- Medico : extends
+EntradaHistorial <|-- Receta : extends
+EntradaHistorial <|-- PruebaMedica : extends
+
+' Composition and Association Relationships
+Paciente *-- HistorialMedico : tiene >
+Paciente --> Medico : medicoAsignado >
+HistorialMedico o-- EntradaHistorial : contiene >
+Medico --> Especialidad : especialidad >
+PruebaMedica --> TipoPrueba : tipoPrueba >
+Administrativo ..> Paciente : gestiona >
+Administrativo ..> Medico : asigna >
+Administrativo ..> PruebaMedica : asigna >
+
+@enduml
+
