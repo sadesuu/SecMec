@@ -73,9 +73,14 @@ public class Usuario extends Persona {
     }
 
     // getters y setters
-    public String getName() { return name; }
-    public String getEmail() { return email; }
-    public String getId() { return id; }
+    public String getUsername() {return username;}
+    public void setUsername(String username) {this.username = username;}
+
+    public String getPasswordHash() {return passwordHash;}
+    public void setPasswordHash(String passwordHash) {this.passwordHash = passwordHash;}
+
+    public String getSalt() {return salt;}
+    public void setSalt(String salt) {this.salt = salt;}
 }
 ```
 
@@ -129,15 +134,8 @@ public class controladorTerminal {
 ```java
 package View;
 
-import Model.User;
-
-public class UserView {
-    public void showUser(User user) {
-        System.out.println("Usuario:");
-        System.out.println("ID: " + user.getId());
-        System.out.println("Nombre: " + user.getName());
-        System.out.println("Email: " + user.getEmail());
-    }
+public class vistaTerminal {
+    public String vistaTerminal(String string) {return string;}
 }
 ```
 
