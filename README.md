@@ -154,12 +154,4 @@ public class vistaTerminal {
 2. Crea un branch con la feature/bugfix: `git checkout -b feature/nombre`.
 3. Haz commits claros y descriptivos.
 4. Abre un Pull Request describiendo los cambios.
-
-## Licencia
-Añade aquí la licencia del proyecto (p. ej. MIT, Apache-2.0) si procede.
-
----
-
-Si quieres, puedo:
-- Ajustar el README para incluir comandos concretos si me indicas si usas Maven, Gradle u otra herramienta.
-- Crear y subir el README como un archivo al repositorio y abrir un PR automáticamente. Indícame si quieres que lo haga y en qué branch base usar. 
+ 
