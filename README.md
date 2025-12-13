@@ -58,17 +58,18 @@ public class Main {
 
 ### 2) Ejemplo Model
 ```java
-package Model;
+package Model.Entities;
 
-public class User {
-    private String id;
-    private String name;
-    private String email;
+public class Usuario extends Persona {
+    protected String username;
+    protected String passwordHash;
+    protected String salt;
 
-    public User(String id, String name, String email) {
-        this.id = id;
-        this.name = name;
-        this.email = email;
+    public Usuario(String nombre, String dni, String email, String direccion, String username, String passwordHash, String salt) {
+        super(nombre, dni, email, direccion);
+        this.username = username;
+        this.passwordHash = passwordHash;
+        this.salt = salt;
     }
 
     // getters y setters
@@ -82,24 +83,45 @@ public class User {
 ```java
 package Controller;
 
-import Model.User;
-import View.UserView;
+import Model.Entities.*;
+import Model.Enum.Especialidad;
+import View.vistaTerminal;
 
-public class UserController {
-    private UserView view;
+import java.time.LocalDate;
+import java.util.ArrayList;
 
-    public UserController() {
-        this.view = new UserView();
+public class controladorTerminal {
+    public static void run() {
+        main();
     }
 
-    public void start() {
-        // Simular obtención de datos (p. ej. desde DB o servicio)
-        User user = new User("1", "Ana", "ana@example.com");
-        // Lógica de la aplicación
-        view.showUser(user);
-    }
+    static void main() {
+        // Crear instancia de la vista
+        vistaTerminal v = new vistaTerminal();
 
-    // Métodos adicionales: createUser, updateUser, deleteUser, etc.
+        // Crear datos de prueba
+        Receta receta = new Receta(LocalDate.now(), "MED123", "Dolor de cabeza", new ArrayList<String>() {{add("Paracetamol 500mg");add("Ibuprofeno 200mg");}});
+        PruebaMedica prueba = new PruebaMedica(LocalDate.now(), "MED123", "Chequeo general", Model.Enum.TipoPrueba.SANGRE, "Normal") {};
+        HistorialMedico historiarPaciente1 = new HistorialMedico(new ArrayList<EntradaHistorial>());
+        Medico medico = new Medico("Wassim", "50487202V" , "Cardiologo", "555-1234", "wassimdoc", "hashedpassword", "randomsalt", "MED123", Especialidad.CARDIOLOGIA);
+        Paciente paciente  = new Paciente( "Juan Perez", "12345678A", "hsolistorrijos@gmail.com", "Calle Falsa 123", historiarPaciente1, medico);
+        Administrativo administrativo = new Administrativo("Ana Gomez", "87654321B", "ana.admin", "hashedpassword", "randomsalt", "ADM456", "Recepcionista", "1");
+
+    
+        // Agregar entradas al historial medico del paciente
+        historiarPaciente1.agregarEntrada(receta);
+        historiarPaciente1.agregarEntrada(prueba);
+
+
+
+        // Mostrar informacion en la terminal
+        System.out.println(v.vistaTerminal(paciente.toString()));
+        System.out.println(v.vistaTerminal(medico.toString()));
+        System.out.println(v.vistaTerminal(administrativo.toString()));
+
+
+
+    }
 }
 ```
 
