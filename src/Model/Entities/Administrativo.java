@@ -63,6 +63,7 @@ public class Administrativo extends Usuario {
      * @param prueba La prueba médica a asignar
      */
     public void asignarPrueba(Paciente paciente, PruebaMedica prueba) {
+        paciente.getHistorial().agregarEntrada(prueba);
     }
 
     /**

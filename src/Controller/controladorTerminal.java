@@ -40,7 +40,7 @@ public class controladorTerminal {
         Paciente paciente  = new Paciente( "Juan Perez", "12345678A", "hsolistorrijos@gmail.com", "Calle Falsa 123", historiarPaciente1, medico);
         Administrativo administrativo = new Administrativo("Ana Gomez", "87654321B", "ana.admin", "hashedpassword", "randomsalt", "ADM456", "Recepcionista", "1");
 
-
+    
         // Agregar entradas al historial medico del paciente
         historiarPaciente1.agregarEntrada(receta);
         historiarPaciente1.agregarEntrada(prueba);

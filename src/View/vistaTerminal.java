@@ -1,9 +1,5 @@
 package View;
 
-import Model.Entities.Administrativo;
-import Model.Entities.Medico;
-import Model.Entities.Paciente;
-
 /**
  * Clase que representa la vista de terminal del sistema.
  * Gestiona la presentación de información en la consola.

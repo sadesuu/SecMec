@@ -11,7 +11,7 @@ public class Usuario extends Persona {
     /** Nombre de usuario para el login */
     protected String username;
     /** Hash de la contraseña del usuario */
-    protected String passwordHash;
+        protected String passwordHash;
     /** Salt usado para el hash de la contraseña */
     protected String salt;
 

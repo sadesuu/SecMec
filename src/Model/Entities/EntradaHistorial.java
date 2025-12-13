@@ -1,7 +1,6 @@
 package Model.Entities;
 
 import java.time.LocalDate;
-import java.time.LocalTime;
 
 /**
  * Clase abstracta que representa una entrada en el historial médico.
