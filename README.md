@@ -1,10 +1,6 @@
 # SecMec
 
-Proyecto SecMec — (README de ejemplo)
-
-Este repositorio contiene la estructura básica de una aplicación organizada por capas: App, Controller, Model y View. Este README explica cómo empezar, la estructura del proyecto y proporciona ejemplos de uso e interacción entre capas.
-
-> Nota: Este README está escrito de forma genérica. Importa el proyecto en tu IDE (por ejemplo IntelliJ) y ajusta los comandos de compilación/ejecución según uses Maven, Gradle, o builds personalizados.
+Proyecto SecMec — 
 
 ## Requisitos
 - JDK 11+ (si el proyecto es Java) o el runtime/lenguaje apropiado según la implementación.
