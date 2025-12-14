@@ -1,6 +1,6 @@
 # SecMec
 
-Proyecto SecMec — 
+**SecMec** es un sistema de gestión médica desarrollado en Java que implementa una arquitectura MVC (Modelo-Vista-Controlador). El proyecto permite administrar información de pacientes, médicos y personal administrativo, incluyendo la gestión de historiales médicos, recetas, pruebas médicas y citas. Está diseñado para facilitar la organización y el seguimiento de datos clínicos de forma estructurada y segura.
 
 ## Requisitos
 - JDK 11+ (si el proyecto es Java) o el runtime/lenguaje apropiado según la implementación.
