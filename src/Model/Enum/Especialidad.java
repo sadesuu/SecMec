@@ -8,11 +8,10 @@ package Model.Enum;
  * @version 1.0
  */
 public enum Especialidad {
-    /** Especialidad en enfermedades del corazón y sistema cardiovascular */
     CARDIOLOGIA,
     /** Especialidad en enfermedades de la piel */
     DERMATOLOGIA,
-    /** Especialidad en enfermedades del sistema nervioso */
+    /** Especialidad en enfermedades del sistema º */
     NEUROLOGIA,
     /** Especialidad en salud infantil */
     PEDIATRIA,

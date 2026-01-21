@@ -7,7 +7,7 @@ package View;
  * @author SecMecProject
  * @version 1.0
  */
-public class vistaTerminal {
+public class vistaTerminal<T> {
 
     /**
      * Método que muestra información en la terminal.
@@ -15,9 +15,8 @@ public class vistaTerminal {
      * @param string Texto a mostrar en la terminal
      * @return El mismo texto recibido
      */
-    public String vistaTerminal(String string) {
-
-        return string;
+    public void  vistaTerminal(T string) {
+        System.out.println(string);
     }
 
 }
